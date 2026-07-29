@@ -42,9 +42,9 @@ Output: 2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1440 ms (beats 7.88%)  
-**Memory:** 56 MB (beats 6.70%)  
-**Submitted:** 2026-07-28T06:59:50.182Z  
+**Runtime:** 1437 ms (beats 7.93%)  
+**Memory:** 55.8 MB (beats 31.92%)  
+**Submitted:** 2026-07-29T16:43:54.245Z  
 
 ```java
 class Solution {
@@ -70,7 +70,7 @@ class Solution {
 
         }
 
-        return 0;
+        return count;
         
     }
 
