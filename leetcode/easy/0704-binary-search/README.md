@@ -42,7 +42,7 @@ Explanation: 2 does not exist in nums so return -1
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 48.5 MB (beats 31.85%)  
-**Submitted:** 2026-08-03T06:33:10.292Z  
+**Submitted:** 2026-08-03T06:41:59.522Z  
 
 ```java
 class Solution {
@@ -53,7 +53,7 @@ class Solution {
 
         while(start <= end){
 
-            int mid = end - (end - start)/2;
+            int mid = start + (end - start)/2;
 
             if(nums[mid] == target){
                 return mid;
