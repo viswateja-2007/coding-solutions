@@ -61,29 +61,30 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 ## Solution
 
 **Language:** Java  
-**Runtime:** 317 ms (beats 5.03%)  
-**Memory:** 47.6 MB (beats 22.89%)  
-**Submitted:** 2026-08-05T17:03:25.126Z  
+**Runtime:** 322 ms (beats 5.03%)  
+**Memory:** 47.4 MB (beats 41.22%)  
+**Submitted:** 2026-08-05T17:18:59.719Z  
 
 ```java
 class Solution {
     public int pivotIndex(int[] nums) {
         int n = nums.length;
-
-        for (int i = 0; i < n; i++) {
+        for(int i = 0; i < n; i++){
             int leftSum = 0;
             int rightSum = 0;
 
-            for (int j = 0; j < i; j++) {
+            for(int j = 0; j < i; j++){
                 leftSum += nums[j];
             }
 
-            for (int j = i + 1; j < n; j++) {
+            for(int j = i + 1; j < n; j++){
                 rightSum += nums[j];
             }
 
-            if (leftSum == rightSum)
+            if(leftSum == rightSum){
                 return i;
+            }
+
         }
 
         return -1;
