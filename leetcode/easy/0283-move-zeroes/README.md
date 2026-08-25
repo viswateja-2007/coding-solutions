@@ -40,9 +40,9 @@ Output: [0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 91.97%)  
-**Memory:** 47.8 MB (beats 38.60%)  
-**Submitted:** 2026-08-21T17:59:02.941Z  
+**Runtime:** 2 ms (beats 91.93%)  
+**Memory:** 47.5 MB (beats 93.59%)  
+**Submitted:** 2026-08-25T20:50:59.721Z  
 
 ```java
 import java.util.Arrays;
