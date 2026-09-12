@@ -48,9 +48,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 10 ms (beats 5.83%)  
-**Memory:** 8.7 MB (beats 35.90%)  
-**Submitted:** 2026-09-12T04:25:35.798Z  
+**Runtime:** 3 ms (beats 43.83%)  
+**Memory:** 8.6 MB (beats 35.90%)  
+**Submitted:** 2026-09-12T04:27:25.772Z  
 
 ```cpp
 class Solution {
@@ -58,19 +58,19 @@ public:
     bool isPalindrome(int x) {
         int temp = x;
         long long num = 0;
+
+        if(x < 0){
+            return false;
+        }
+
         while(x > 0){
             int lastDigit = x % 10;
             num = num * 10 + lastDigit;
             x = x / 10;
         }
 
-        if(num == temp){
-            return true;
-        }
+        return temp == num;
 
-        else{
-            return false;
-        }
     }
 };
 ```
