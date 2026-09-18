@@ -49,13 +49,17 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 **Language:** C++  
 **Runtime:** 7 ms (beats 13.38%)  
-**Memory:** 10.9 MB (beats 11.99%)  
-**Submitted:** 2026-09-18T21:16:18.685Z  
+**Memory:** 11 MB (beats 7.20%)  
+**Submitted:** 2026-09-18T21:18:47.636Z  
 
 ```cpp
 class Solution {
 public:
     bool isPalindrome(int x) {
+        if(x < 0){
+            return false;
+        }
+        
         string y = to_string(x);
         int start = 0;
         int end = y.size() - 1;
