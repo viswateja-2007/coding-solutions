@@ -48,28 +48,30 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 3 ms (beats 43.83%)  
-**Memory:** 8.6 MB (beats 35.90%)  
-**Submitted:** 2026-09-12T04:27:25.772Z  
+**Runtime:** 7 ms (beats 13.38%)  
+**Memory:** 10.9 MB (beats 11.99%)  
+**Submitted:** 2026-09-18T21:16:18.685Z  
 
 ```cpp
 class Solution {
 public:
     bool isPalindrome(int x) {
-        int temp = x;
-        long long num = 0;
+        string y = to_string(x);
+        int start = 0;
+        int end = y.size() - 1;
 
-        if(x < 0){
-            return false;
+        while(start <= end){
+            if(y[start] == y[end]){
+                start++;
+                end--;
+            }
+
+            else{
+                return false;
+            }
         }
 
-        while(x > 0){
-            int lastDigit = x % 10;
-            num = num * 10 + lastDigit;
-            x = x / 10;
-        }
-
-        return temp == num;
+        return true;
 
     }
 };
